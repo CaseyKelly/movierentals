@@ -1,0 +1,16 @@
+Enter new movie information: <br />
+<%= form_for @movie do |f| %>
+  Title: <%= f.text_field :title %> <br />
+  Year: <%= f.text_field :year %> <br />
+  <%= f.submit %>
+<% end %>
+
+<hr />
+List of all movies: <br />
+<% if !@movies.blank? %>
+  <% for item in @movies %>
+    <%= item.title %> (<%= item.year %>) <br />
+  <% end %>
+<% else %>
+
+<% end %>
